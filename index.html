@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descobrindo o Porquê da Fé — uma jornada de teologia para crianças de 8 a 14 anos.">
+  <title>Descobrindo o Porquê da Fé</title>
+  <style>
+    :root{--navy:#09172d;--muted:#627084;--blue:#2e65ea;--blue-dark:#2254d5;--blue-soft:#edf3ff;--green:#19c968;--green-dark:#0da956;--orange:#f47b18;--paper:#f7f9fc;--white:#fff;--line:#e7ecf3;--shadow:0 18px 55px rgba(30,65,130,.12);--radius:26px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--navy);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    .topbar{height:32px;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#2960e4,#3479ee);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .container{width:min(1120px,calc(100% - 36px));margin:0 auto}
+    .hero{text-align:center;padding:46px 0 66px;background:radial-gradient(circle at 50% 17%,rgba(232,240,255,.92),transparent 37%),var(--paper)}
+    .secure{display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-size:11px;letter-spacing:.17em;font-weight:900;text-transform:uppercase;margin-bottom:22px}
+    .secure img{width:15px;height:15px}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(40px,6.8vw,76px);line-height:.99;letter-spacing:-.065em;max-width:800px;margin:0 auto 34px;font-weight:900}
+    .blue{color:var(--blue)}
+    .hero-art{width:min(640px,92vw);margin:0 auto 24px;filter:drop-shadow(0 18px 16px rgba(30,65,130,.1))}
+    .lead{max-width:670px;margin:0 auto 24px;color:#647084;font-size:16px;line-height:1.55}
+    .lead strong{color:var(--navy)}
+    .cta{border:0;display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:58px;padding:0 34px;border-radius:14px;background:linear-gradient(135deg,#1dc96b,#12b85f);box-shadow:0 12px 24px rgba(22,190,99,.22);color:#fff;font-size:13px;font-weight:900;letter-spacing:.01em;text-transform:uppercase;cursor:pointer;transition:.2s transform,.2s box-shadow}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 16px 28px rgba(22,190,99,.3)}
+    .cta .arrow{font-size:18px;line-height:1}
+    .delivery{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:11px;color:#6e7988;font-size:12px}
+    .delivery img{width:14px;height:14px}
+    .social-proof{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:18px}
+    .avatars{display:flex;align-items:center}
+    .avatars img{width:29px;height:29px;object-fit:cover;border:2px solid var(--paper);border-radius:50%;margin-left:-7px;box-shadow:0 3px 9px rgba(0,0,0,.16)}
+    .avatars img:first-child{margin-left:0}
+    .proof-copy{color:#364457;font-size:12px;font-weight:700}
+    section{padding:78px 0}
+    .story{padding-top:42px}
+    .split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+    .split h2{font-size:clamp(30px,4vw,47px);line-height:1.07;letter-spacing:-.045em;margin-bottom:0;font-weight:900}
+    .split h2 .blue{display:block}
+    .story-image{width:min(520px,100%);margin:0 auto;filter:drop-shadow(0 16px 22px rgba(27,59,118,.12))}
+    .section-kicker{color:var(--orange);font-size:18px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;text-align:center;margin-bottom:10px}
+    .section-title{font-size:clamp(30px,4.2vw,48px);line-height:1.1;letter-spacing:-.05em;text-align:center;margin:0 auto 34px;font-weight:900}
+    .feature-heading{max-width:740px}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .feature{min-height:140px;padding:24px 20px;background:#fff;border:1px solid rgba(225,232,241,.75);border-radius:14px;box-shadow:0 7px 24px rgba(26,58,111,.06)}
+    .feature img{width:23px;height:23px;margin-bottom:17px}
+    .feature strong{display:block;font-size:14px;margin-bottom:5px}
+    .feature span{display:block;color:#7b8491;font-size:12px;line-height:1.38}
+    .countdown{width:min(760px,100%);margin:38px auto 0;padding:38px 32px 34px;border-radius:26px;background:linear-gradient(135deg,#2f64ee 0%,#4a78f7 100%);color:#fff;text-align:center;box-shadow:var(--shadow)}
+    .countdown .section-kicker{color:#dfe8ff;font-size:10px;letter-spacing:.23em;margin-bottom:5px}
+    .countdown h3{font-size:24px;line-height:1.1;margin-bottom:17px;letter-spacing:-.03em}
+    .clock{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:22px}
+    .clock-box{min-width:77px;padding:8px 12px 9px;border-radius:13px;background:var(--orange)}
+    .clock-box b{display:block;font-size:40px;line-height:1;font-weight:900;letter-spacing:-.04em}
+    .clock-box small{display:block;margin-top:7px;color:#fff;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .clock-sep{font-size:27px;font-weight:900;color:#d8e2ff;margin-top:-21px}
+    .countdown p{color:#e6edff;font-size:13px;margin:0 auto 18px}
+    .countdown .cta{min-height:50px;font-size:12px;padding:0 27px}
+    .objectives{padding-top:68px}
+    .objectives h2{font-size:clamp(28px,4vw,43px);letter-spacing:-.045em;text-align:center;margin-bottom:28px}
+    .objective-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .objective{display:flex;align-items:flex-start;gap:10px;padding:15px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);color:#4c596a;font-size:13px}
+    .objective img{width:19px;height:19px;flex:0 0 auto;margin-top:1px}
+    .method{background:linear-gradient(180deg,transparent,#f0f5ff 88%);text-align:center}
+    .method .intro{color:var(--muted);margin:0 auto 30px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:left}
+    .step{position:relative;padding:24px 20px 22px;background:#fff;border-radius:16px;border:1px solid var(--line);box-shadow:0 9px 25px rgba(28,61,116,.06)}
+    .step-number{display:inline-flex;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+    .step-number:after{content:"";width:40px;height:2px;background:var(--orange);margin:8px 0 0 8px}
+    .step h3{font-size:18px;letter-spacing:-.025em;margin-bottom:8px}
+    .step p{color:#6a7687;font-size:13px;line-height:1.5;margin:0}
+    .series{background:#fff;padding-top:92px;padding-bottom:92px}
+    .series .section-title{margin-bottom:8px}
+    .subheading{text-align:center;color:var(--muted);margin-bottom:38px}
+    .series-layout{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+    .series-image{width:min(540px,100%);margin:0 auto;filter:drop-shadow(0 19px 24px rgba(34,60,110,.13))}
+    .bullet-list{padding:0;margin:0 0 26px;list-style:none}
+    .bullet-list li{display:flex;align-items:flex-start;gap:10px;margin:14px 0;color:#48566a;font-size:15px}
+    .bullet-list li:before{content:"✓";display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#e4f9ee;color:#13b85d;font-weight:900;font-size:13px;flex:0 0 auto}
+    .limited{padding:15px 18px;border-left:3px solid var(--orange);background:#fff8f1;color:#7d674f;font-size:13px;border-radius:0 10px 10px 0;margin-bottom:20px}
+    .bonuses{background:linear-gradient(180deg,#fff,#f3f7ff)}
+    .bonuses .section-title{max-width:760px}
+    .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .bonus-card{overflow:hidden;background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 10px 32px rgba(20,51,105,.08)}
+    .bonus-card figure{padding:20px 20px 0;margin:0;background:linear-gradient(135deg,#eef4ff,#fff)}
+    .bonus-card figure img{width:100%;height:200px;object-fit:contain}
+    .bonus-body{padding:23px 22px 24px}
+    .bonus-label{color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .bonus-card h3{font-size:19px;line-height:1.15;letter-spacing:-.03em;margin:7px 0 11px}
+    .bonus-card p{color:#6b7787;font-size:13px;line-height:1.5;margin-bottom:17px}
+    .free{display:inline-block;padding:7px 10px;border-radius:6px;background:#e8faef;color:#0eaf54;font-size:11px;font-weight:900;text-transform:uppercase}
+    .plans{background:var(--paper)}
+    .plans-head{text-align:center;margin-bottom:30px}
+    .plans-head .section-kicker{font-size:12px;margin-bottom:8px}
+    .plans-head h2{font-size:clamp(32px,4.5vw,52px);letter-spacing:-.055em;margin:0}
+    .plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:980px;margin:0 auto}
+    .plan{position:relative;background:#fff;border:1px solid #e0e7f0;border-radius:20px;padding:28px 27px 25px;box-shadow:0 13px 40px rgba(21,53,104,.08)}
+    .plan.complete{border:2px solid var(--blue);padding:27px 26px 24px}
+    .popular{position:absolute;right:19px;top:19px;padding:7px 10px;background:var(--orange);color:#fff;border-radius:6px;font-size:10px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .plan h3{font-size:25px;letter-spacing:-.04em;margin:0 0 4px}
+    .plan-sub{color:#758195;font-size:13px;margin-bottom:11px}
+    .plan-image{height:220px;width:100%;object-fit:contain;margin:2px auto 10px}
+    .plan .bullet-list{margin-bottom:20px}
+    .plan .bullet-list li{font-size:13px;margin:8px 0}
+    .price-old{color:#8792a1;font-size:14px;margin:0}
+    .price{font-size:43px;letter-spacing:-.06em;line-height:1;font-weight:900;margin:4px 0 7px}
+    .price small{font-size:16px;letter-spacing:0;color:#7a8595;font-weight:600}
+    .installments{color:#697789;font-size:12px;margin-bottom:7px}
+    .save{color:#12ae58;font-size:12px;font-weight:800;margin-bottom:20px}
+    .plan .cta{width:100%;min-height:53px;font-size:12px}
+    .guarantee{max-width:860px;margin:30px auto 0;padding:26px 28px;border-radius:16px;background:#eff7ff;border:1px solid #dbe9ff;text-align:center}
+    .guarantee strong{display:block;font-size:17px;margin-bottom:6px}
+    .guarantee p{color:#667486;font-size:13px;line-height:1.5;margin:0}
+    .testimonials{background:#fff}
+    .testimonials .subheading{margin-bottom:32px}
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .quote{padding:25px 22px;background:#fbfcff;border:1px solid var(--line);border-radius:16px}
+    .quote-mark{color:var(--blue);font-size:39px;line-height:.7;font-weight:900;margin-bottom:13px}
+    .quote p{font-size:14px;line-height:1.55;color:#526074;margin-bottom:20px}
+    .quote strong{display:block;font-size:13px}
+    .quote small{color:#8b95a3;font-size:11px}
+    .faq{background:var(--paper)}
+    .faq-list{max-width:780px;margin:0 auto;border-top:1px solid var(--line)}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:15px;border:0;background:none;color:var(--navy);text-align:left;padding:19px 4px;font-size:15px;font-weight:800;cursor:pointer}
+    .faq-question span:last-child{color:var(--blue);font-size:23px;font-weight:400;transition:.2s transform}
+    .faq-answer{display:none;color:#677588;font-size:13px;line-height:1.55;padding:0 38px 19px 4px}
+    .faq-item.open .faq-answer{display:block}
+    .faq-item.open .faq-question span:last-child{transform:rotate(45deg)}
+    .final-cta{padding:94px 0 78px;background:linear-gradient(135deg,#285fea,#4d7df5);color:#fff;text-align:center}
+    .final-cta h2{max-width:700px;font-size:clamp(34px,5vw,57px);line-height:1.04;letter-spacing:-.055em;margin:0 auto 12px}
+    .final-cta p{color:#e3ebff;margin:0 auto 26px;font-size:16px}
+    .final-cta .cta{background:#1dca69;color:#fff;box-shadow:0 12px 24px rgba(4,60,30,.22)}
+    footer{padding:32px 18px 40px;background:#071329;color:#bdc6d7;text-align:center;font-size:11px;line-height:1.6}
+    footer strong{display:block;color:#fff;font-size:14px;margin-bottom:7px}
+    footer p{max-width:760px;margin:7px auto 0}
+    @media (max-width:820px){.split,.series-layout{grid-template-columns:1fr;gap:26px}.split .story-image{order:-1}.features,.steps{grid-template-columns:repeat(2,1fr)}.bonus-grid,.quotes{grid-template-columns:1fr 1fr}.plan-grid{grid-template-columns:1fr;max-width:580px}.series-layout .series-image{order:-1;max-width:580px}}
+    @media (max-width:560px){.container{width:min(100% - 28px,1120px)}.hero{padding-top:35px}.topbar{font-size:9px}.hero-art{margin-bottom:15px}.lead{font-size:14px}.cta{width:100%;padding:0 18px}.social-proof{flex-direction:column;gap:7px}.story{padding-top:28px}.split h2{font-size:32px}.features,.steps,.bonus-grid,.quotes,.objective-grid{grid-template-columns:1fr}.feature{min-height:0}.countdown{padding:29px 17px}.clock-box{min-width:67px}.clock-box b{font-size:34px}.clock{gap:8px}.series,.bonuses,.plans,.testimonials,.faq{padding:64px 0}.plan{padding:23px 19px}.plan.complete{padding:22px 18px}.popular{position:static;display:inline-block;margin-bottom:12px}.plan-image{height:185px}.final-cta{padding:72px 0 62px}.final-cta .cta{width:auto;max-width:100%}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Oferta disponível apenas hoje 14/08/2026</div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="secure"><img src="images/lock.svg" alt=""><span>Compra 100% segura</span></div>
+        <h1>Construa uma fé <span class="blue">inabalável</span> nos seus filhos<br>antes que seja tarde demais.</h1>
+        <img class="hero-art" src="images/mockup-1-CKgwf4Ld.webp" alt="Coleção de ebooks Descobrindo o Porquê da Fé">
+        <p class="lead">A série digital criada por <strong>apologistas, teólogos e psicólogos infantis</strong> para ensinar crianças de <strong class="blue">8 a 14 anos</strong> a PENSAR a fé — não apenas repetir histórias bíblicas.</p>
+        <a class="cta" href="#planos">Quero garantir o acesso com desconto <span class="arrow">→</span></a>
+        <div class="delivery"><img src="images/mail.svg" alt="">Você recebe tudo na hora, direto no seu e-mail</div>
+        <div class="social-proof"><div class="avatars"><img src="images/avatar-1-sVTBFPRD.jpg" alt="Mãe satisfeita"><img src="images/avatar-2-C8WiO5s-.jpg" alt="Pai satisfeito"><img src="images/avatar-3-GQCkPQw9.jpg" alt="Mãe jovem satisfeita"><img src="images/avatar-4-Dt2B0rjA.jpg" alt="Pai satisfeito"><img src="images/avatar-5-C72zMxZI.jpg" alt="Mãe satisfeita"></div><div class="proof-copy">+1000 famílias transformadas</div></div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="container split">
+        <h2>Cada lição faz a criança <span class="blue">descobrir a verdade sozinha</span>, criando conexões profundas e duradouras.</h2>
+        <img class="story-image" src="images/folhas-mockup-DQQsZ2kW.webp" alt="Mockup das folhas de atividades">
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-kicker">Um material único</div>
+        <h2 class="section-title feature-heading">Você receberá um material que vai <span class="blue">muito além da Escola Dominical.</span></h2>
+        <div class="features">
+          <article class="feature"><img src="images/book.svg" alt=""><strong>13 Livros Digitais</strong><span>Jornada completa de 52 semanas</span></article>
+          <article class="feature"><img src="images/device.svg" alt=""><strong>Acesso</strong><span>Celular, tablet ou computador</span></article>
+          <article class="feature"><img src="images/print.svg" alt=""><strong>Imprimível</strong><span>Imprima se sua família preferir</span></article>
+          <article class="feature"><img src="images/calendar.svg" alt=""><strong>Ritmo flexível</strong><span>Pensado para uso semanal</span></article>
+        </div>
+        <div class="countdown" data-countdown>
+          <div class="section-kicker">Aproveite o preço promocional</div>
+          <h3>Por tempo limitado</h3>
+          <div class="clock"><div class="clock-box"><b data-minutes>14</b><small>Minutos</small></div><div class="clock-sep">:</div><div class="clock-box"><b data-seconds>51</b><small>Segundos</small></div></div>
+          <p>Aqui, seu filho não aprende apenas <em>o que</em> acreditar, mas <strong>por que</strong> acreditar.</p>
+          <a class="cta" href="#planos">Quero garantir o acesso <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="objectives">
+      <div class="container">
+        <h2>Este material é ideal para você que deseja:</h2>
+        <div class="objective-grid">
+          <div class="objective"><img src="images/target.svg" alt="">Prevenir o abandono da fé no futuro</div>
+          <div class="objective"><img src="images/target.svg" alt="">Ajudar seu filho a responder dúvidas difíceis</div>
+          <div class="objective"><img src="images/target.svg" alt="">Desenvolver pensamento cristão profundo</div>
+          <div class="objective"><img src="images/target.svg" alt="">Ir além da Escola Dominical tradicional</div>
+          <div class="objective"><img src="images/target.svg" alt="">Construir uma fé firme antes da adolescência</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="method">
+      <div class="container">
+        <div class="section-kicker">Método de aplicação</div>
+        <h2 class="section-title">Como aplicar o método no dia a dia do seu filho</h2>
+        <p class="intro">Simples, prático e direto ao ponto.</p>
+        <div class="steps">
+          <article class="step"><div class="step-number">Passo 01</div><h3>Estudo guiado</h3><p>Seu filho aprende no ritmo dele, com lições curtas e objetivas.</p></article>
+          <article class="step"><div class="step-number">Passo 02</div><h3>Conversas naturais</h3><p>As perguntas do material geram diálogos profundos em casa.</p></article>
+          <article class="step"><div class="step-number">Passo 03</div><h3>Pensamento crítico cristão</h3><p>Ele aprende a avaliar ideias, dúvidas e questionamentos.</p></article>
+          <article class="step"><div class="step-number">Passo 04</div><h3>Fé aplicada à vida real</h3><p>A fé deixa de ser abstrata e passa a fazer sentido.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="series">
+      <div class="container">
+        <div class="section-kicker">Oferta limitada apenas hoje</div>
+        <h2 class="section-title">Série <span class="blue">"Descobrindo o Porquê da Fé"</span></h2>
+        <p class="subheading">52 semanas de teologia sistemática para crianças.</p>
+        <div class="series-layout">
+          <img class="series-image" src="images/pacote-completo-ClqLDhyC.webp" alt="Pacote completo da série Descobrindo o Porquê da Fé">
+          <div>
+            <ul class="bullet-list"><li>Base teológica sólida</li><li>Clareza intelectual</li><li>Segurança para responder questionamentos</li><li>Fundamento para a adolescência</li></ul>
+            <div class="limited">Essa oferta está disponível para as próximas <strong>7 famílias</strong>. Depois disso, o preço será ajustado.</div>
+            <a class="cta" href="#planos">Garantir acesso com desconto <span class="arrow">→</span></a>
+            <div class="delivery"><img src="images/mail.svg" alt="">Você recebe tudo na hora, direto no seu e-mail</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bonuses">
+      <div class="container">
+        <div class="section-kicker">E não para por aí... tem mais!</div>
+        <h2 class="section-title">Você também vai receber <span class="blue">3 bônus exclusivos</span></h2>
+        <div class="bonus-grid">
+          <article class="bonus-card"><figure><img src="images/bonus-1-CTXpxjOt.webp" alt="Bônus 1 - Guia dos Pais Pensadores"></figure><div class="bonus-body"><div class="bonus-label">Bônus #1</div><h3>Guia dos Pais Pensadores</h3><p>Como lidar com perguntas difíceis sobre fé sem pânico, respostas prontas ou conflitos — transformando dúvidas em conversas construtivas.</p><span class="free">Valor R$47 · Grátis</span></div></article>
+          <article class="bonus-card"><figure><img src="images/bonus-2-CqQy6UY8.webp" alt="Bônus 2 - Manual de Erros Comuns que Enfraquecem a Fé Infantil"></figure><div class="bonus-body"><div class="bonus-label">Bônus #2</div><h3>Manual de Erros Comuns que Enfraquecem a Fé Infantil</h3><p>Atitudes comuns, porém prejudiciais, que muitos pais cometem sem perceber — e como ajustá-las para proteger o desenvolvimento da fé.</p><span class="free">Valor R$47 · Grátis</span></div></article>
+          <article class="bonus-card"><figure><img src="images/bonus-3-ChAqeM5e.webp" alt="Bônus 3 - Guia de Transição dos 14 para os 18 Anos"></figure><div class="bonus-body"><div class="bonus-label">Bônus #3</div><h3>Guia de Transição: Dos 14 aos 18 Anos</h3><p>Como apoiar seus filhos nas mudanças cognitivas e emocionais da adolescência final, sem controle excessivo, medo ou pressão.</p><span class="free">Valor R$47 · Grátis</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans" id="planos">
+      <div class="container">
+        <div class="plans-head"><div class="section-kicker">Última chance — oferta termina hoje</div><h2>Escolha o melhor plano para você!</h2></div>
+        <div class="plan-grid">
+          <article class="plan">
+            <h3>Plano Básico</h3><div class="plan-sub">Série completa "Descobrindo o Porquê da Fé"</div>
+            <img class="plan-image" src="images/mockup-1-CKgwf4Ld.webp" alt="Mockup do Plano Básico">
+            <ul class="bullet-list"><li>Série "Descobrindo o Porquê da Fé" – 52 semanas</li><li>Guia dos Pais Pensadores</li><li>Manual de Erros Comuns que Enfraquecem a Fé</li><li>Guia de Transição: Dos 14 aos 18 Anos</li></ul>
+            <p class="price-old">de R$74,00 por:</p><div class="price">R$47,90</div><div class="installments">ou 12x de R$4,89 no cartão</div><div class="save">Você economiza R$26,10</div>
+            <a class="cta" href="https://pay.wiapy.com/7NbR4fl2Q1" target="_blank" rel="noopener">Quero o plano básico <span class="arrow">→</span></a>
+          </article>
+          <article class="plan complete">
+            <div class="popular">★ Mais vendido</div><h3>Plano Completo</h3><div class="plan-sub">Todos os bônus inclusos · 2x mais conteúdo</div>
+            <img class="plan-image" src="images/pacote-completo-ClqLDhyC.webp" alt="Mockup do Plano Completo">
+            <ul class="bullet-list"><li>Série "Descobrindo o Porquê da Fé" – 52 semanas</li><li>Bônus #1 Guia dos Pais Pensadores</li><li>Bônus #2 Manual de Erros Comuns que Enfraquecem a Fé</li><li>Bônus #3 Guia de Transição: Dos 14 aos 18 Anos</li></ul>
+            <p class="price-old">de R$147,00 por:</p><div class="price">R$67,90</div><div class="installments">ou 12x de R$6,93 no cartão</div><div class="save">Você economiza R$79,10</div>
+            <a class="cta" href="https://pay.wiapy.com/Wim-S2Tyh" target="_blank" rel="noopener">Quero o plano completo <span class="arrow">→</span></a>
+          </article>
+        </div>
+        <div class="guarantee"><strong>Garantia incondicional de 90 dias</strong><p>Você tem 90 dias para testar a metodologia. Se por algum motivo perceber que não é para você, devolvemos integralmente o seu investimento, sem questionamentos.</p></div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-kicker">Famílias que já transformaram</div>
+        <h2 class="section-title">Veja o que nossos clientes estão dizendo</h2>
+        <p class="subheading">Leia os depoimentos de quem já tomou a decisão certa.</p>
+        <div class="quotes">
+          <article class="quote"><div class="quote-mark">“</div><p>Meu filho sempre fez perguntas difíceis e eu ficava sem saber o que responder. Esse material não me deu respostas prontas — me ensinou a conversar melhor com meu filho. Hoje ele consegue explicar por que acredita.</p><strong>Ana Paula R.</strong><small>Mãe de um menino de 9 anos</small></article>
+          <article class="quote"><div class="quote-mark">“</div><p>Percebi que estava ensinando meu filho a repetir frases, não a pensar. A jornada me ajudou a corrigir isso. Vi meu filho ficando mais confiante para falar da fé sem ficar defensivo.</p><strong>Ricardo M.</strong><small>Pai de um menino de 11 anos</small></article>
+          <article class="quote"><div class="quote-mark">“</div><p>Sempre tive medo das dúvidas da minha filha. Achava que ela estava se afastando. Hoje entendo que as perguntas fazem parte do crescimento. O material trouxe mais calma e profundidade.</p><strong>Juliana S.</strong><small>Mãe solo</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="section-kicker">Perguntas frequentes</div>
+        <h2 class="section-title">Tire suas dúvidas</h2>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-question"><span>Isso é um curso de teologia?</span><span>+</span></button><div class="faq-answer">É uma jornada digital guiada, com 52 semanas de conteúdos e atividades de teologia sistemática adaptadas para crianças de 8 a 14 anos.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>É necessário seguir uma ordem ou calendário?</span><span>+</span></button><div class="faq-answer">O material foi pensado para uso semanal, mas a família pode adaptar o ritmo à sua rotina.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>Isso substitui a igreja ou a escola bíblica?</span><span>+</span></button><div class="faq-answer">Não. O conteúdo é um apoio para a formação em casa e pode complementar a igreja e a escola bíblica.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>O conteúdo é todo digital?</span><span>+</span></button><div class="faq-answer">Sim. Você recebe os livros e bônus por e-mail e pode acessar pelo celular, tablet ou computador; também é possível imprimir.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>O acesso é por quanto tempo?</span><span>+</span></button><div class="faq-answer">O acesso ao material é digital e foi organizado para que a família possa consultá-lo durante toda a jornada.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>Posso acessar pelo celular?</span><span>+</span></button><div class="faq-answer">Sim. O conteúdo foi preparado para ser visualizado em celular, tablet ou computador.</div></div>
+          <div class="faq-item"><button class="faq-question"><span>E se eu não gostar do curso?</span><span>+</span></button><div class="faq-answer">Você conta com garantia incondicional de 90 dias. Se não fizer sentido para sua família, é possível solicitar a devolução dentro do prazo.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container"><h2>Ensinar a fé em casa é o começo.</h2><p>O que muda tudo é prepará-lo para <em>o que acontece fora dela.</em></p><a class="cta" href="#planos">Quero minha vaga agora <span class="arrow">→</span></a></div>
+    </section>
+  </main>
+  <footer><strong>Descobrindo o Porquê da Fé</strong><div>© 2026 — Todos os direitos reservados.</div><p>Este site não é afiliado ao Facebook, Instagram ou Meta.</p><p>Cada família vive uma realidade diferente, por isso os resultados podem variar. O conteúdo apresentado tem caráter educativo e não garante resultados específicos. Os relatos compartilhados refletem experiências reais de pessoas que utilizaram o material.</p></footer>
+  <script>
+    (function(){
+      var seconds=14*60+51;
+      var m=document.querySelector('[data-minutes]'),s=document.querySelector('[data-seconds]');
+      function tick(){var mm=Math.floor(seconds/60),ss=seconds%60;m.textContent=String(mm).padStart(2,'0');s.textContent=String(ss).padStart(2,'0');if(seconds>0)seconds--}
+      tick();setInterval(tick,1000);
+      document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.parentElement;document.querySelectorAll('.faq-item.open').forEach(function(other){if(other!==item)other.classList.remove('open')});item.classList.toggle('open')})});
+    })();
+  </script>
+</body>
+</html>
